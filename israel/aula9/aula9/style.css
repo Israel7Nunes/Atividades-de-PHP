@@ -1,0 +1,151 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --text:#13081b;
+    --background: #f7f4fb;
+    --primay: #904cc8;
+    --secondary: #e09ab9;
+    --ascendent: #d47777;
+
+    --dtext:#efe4f7;
+    --dbackground: #07040b;
+    --dprimay: #7c37b3;
+    --dsecondary: #651f3f;
+    --dascendent: #882b2b;
+
+}
+body{
+    background-color: var(--background);
+}
+
+/*------------------------------------------ header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+    height: 70px;
+    align-items: center;
+}
+h1{
+    color: transparent;
+    background-image: linear-gradient(to right, var(--primay), var(--ascendent));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.toggle-label{
+    width: 56px;
+    height: 28px;
+    background-color: var(--secondary);
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-label::before{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--primay);
+    transition: ease .3s;
+}
+
+.toggle-btn:checked + .toggle-label{
+    background-color: var(--ascendent);
+}
+
+.toggle-btn:checked + .toggle-label::before{
+    transform: translateX(30px);
+}
+.toggle-btn{
+    display: none;
+}
+
+/*------------------------- main */
+main{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    flex-direction: column;
+    row-gap: 10vh;
+}
+
+form{
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    row-gap: 15px;
+    background: linear-gradient(to top right,  var(--primay), var(--ascendent));
+}
+form input{
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+    border: solid 2px var(--background);
+    outline: none;
+    width: 200px;
+    background-color: transparent;
+    transition: ease .4s;
+}
+.remove{
+    display: none;
+}
+#mg:hover{
+    background-color: var(--background);
+    transition: ease .4s;
+    cursor: pointer;
+}
+
+
+/*------------------------- footer */
+footer{
+    height: calc(30vh - 70px);
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------ Dark mode */
+
+.dark-mode header, .dark-mode main, .dark-mode footer{
+    background-color: var(--dbackground);
+}
+.dark-mode footer, .dark-mode main, .dark-mode input{
+    color: var(--dtext);
+}
+.dark-mode #mg:hover{
+    color: var(--text);
+}
+.dark-mode form{
+    background: linear-gradient(to top right,  var(--dprimay), var(--dascendent));
+}

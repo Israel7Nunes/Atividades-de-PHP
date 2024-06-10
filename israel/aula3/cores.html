@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="imgs/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Formatação de Texto &trade;</h1>
+    </header>
+
+    <form action="cores.php" method="get">
+        <div>
+            <label for="itexto">Insira Seu Texto:</label>
+            <input type="text" name="texto" id="itexto">
+        </div>
+
+        <div>
+        <label for="itamanho">Tamanho da Fonte:</label>
+            <select name="tamanho" id="itamanho" style="font-size: .8em;">
+                <option value="8pt"> 8 </option>
+                <option value="10pt"> 10 </option>
+                <option value="14pt"> 14 </option>
+                <option value="20pt"> 20 </option>
+                <option value="40pt"> 40 </option>
+            </select>
+        </div>
+
+        <div>
+        <label for="ifonte">Escolha a Fonte</label>
+            <select name="fonte" id="ifonte" style="font-size: .8em;">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="icor">Escolha a Cor</label>
+            <input type="color" name="cor" id="icor">
+        </div>
+
+        <div>
+            <label for="ibgcor">Escolha a cor de Fundo</label>
+            <input type="color" name="bgcor" id="ibgcor">
+        </div>
+
+        <div>
+            <input type="submit" value="Gerar Texto" class="submit">
+        </div>
+    </form>
+
+
+    <footer>
+        <p>Site Feito Por Israel Salvalaio Nunes | &copy; Copyright 2024</p>
+        <a href="https://www.flaticon.com/br/icones-gratis/renomear" title="renomear ícones">Renomear ícones criados por Freepik - Flaticon</a>
+    </footer>
+
+</body>
+</html>

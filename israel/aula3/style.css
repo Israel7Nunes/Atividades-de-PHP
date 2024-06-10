@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+:root{
+    --background: #fcfbfc;
+    --text: #101011;
+    --primary: #745ca4;
+    --secondary: #a994d2;
+    --accent: #8e6cd1;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header{
+    background-color: var(--primary);
+}
+
+header h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    color: var(--background);
+    text-align: center;
+}
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    background-color: var(--secondary);
+    position: relative;
+    top: 10vh;
+    left: 8vw;
+    width: 80vw;
+    padding: 1%;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+form div{
+    position: relative;
+    left: 20%;
+    background-color: var(--accent);
+    width: 70%;
+    padding: 2%;
+    border-radius: 8px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.submit{
+    font-size: .8em;
+    background-color: var(--accent);
+    color: var(--background);
+    border: solid .1em;
+    border-radius: 4px;
+    padding: 1%;
+    position: relative;
+    left: 35%;
+}
+
+footer{
+    background-color: var(--primary);
+    color: var(--background);
+    position: absolute;
+    bottom: 0vh;
+    width: 100vw;
+}
+
+footer p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+}
